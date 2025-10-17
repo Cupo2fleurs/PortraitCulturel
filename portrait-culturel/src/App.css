@@ -1,0 +1,219 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.style {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  scroll-behavior: smooth;
+}
+.tab {
+  background-color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+}
+.tab:hover {
+  background-color: rgb(74, 69, 69);
+}
+
+.navbar{
+  position: fixed;
+  width:100%;
+  display:flex;
+  justify-content: space-between;
+  z-index: 999;
+}
+#MyLogo {
+  margin-left: 20px;
+  margin-top: 20px;
+  text-align: right;
+
+}
+.containTravel{
+  display:inline-block;
+  border-radius: 20px;
+  padding: 5px;
+  vertical-align: bottom;
+  backdrop-filter: blur(5px);
+  position: absolute;
+  top:60%;
+  left: 50%;
+  transform:translate(-50%,-50%);
+  
+}
+.Travel{
+  display: inline-block;
+}
+.littleSpace{
+  margin-left: 20px;
+}
+#Moi {
+  margin-top: 4rem;
+  scroll-margin-top: 100px; 
+  padding-top: 120px
+}
+#Passion button {
+  background-color: #1e293b;
+  color: white;
+  border-radius: 12px;
+  transition: transform 0.2s ease;
+}
+
+#Passion button:hover {
+  transform: scale(1.05);
+  background-color: #334155;
+}
+
+
+#Passion{
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+}
+#Passion .mantine-Text-root {
+  color: white !important;
+}
+
+#Passion .mantine-Title-root {
+  color: white !important;
+}
+
+.mantine-Carousel-root {
+  max-width: 900px;
+  margin: 0 auto;
+  
+}
+
+.mantine-Carousel-slide {
+  transition: transform 0.3s ease-in-out;
+}
+
+.mantine-Carousel-slide:hover {
+  transform: scale(1.03);
+}
+
+.mantine-Card-root {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mantine-Carousel-indicators {
+  margin-top: 1rem;
+}
+#Famille {
+  margin-top: 6rem;
+  margin-bottom: 6rem;
+  position: relative;
+}
+
+.photo-wall {
+  position: relative;
+  width: 100%;
+  height: 550px;
+}
+
+.polaroid {
+  position: absolute;
+  width: 180px;
+  padding: 10px 10px 30px 10px;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.polaroid:hover {
+  transform: scale(1.08) rotate(0deg);
+  z-index: 10;
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25);
+}
+
+.polaroid-photo {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 2px;
+  display: block;
+}
+
+.polaroid-caption {
+  margin-top: 8px;
+  font-family: 'Caveat', cursive; /* belle écriture manuscrite */
+  font-size: 16px;
+  color: #333;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;600&display=swap');
+
+#Bulle {
+  margin-top: 8rem;
+  margin-bottom: 8rem;
+}
+
+.bubble-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 3rem; /* un peu plus d’espace entre les bulles */
+  flex-wrap: wrap;
+}
+
+/* 🫧 Bulles agrandies */
+.bubble {
+  width: 340px;   /* ⬆️ largeur augmentée */
+  height: 340px;  /* ⬆️ hauteur augmentée */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  text-align: center;
+  box-shadow: 0 10px 18px rgba(0, 0, 0, 0.18);
+  animation: float 6s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bubble:hover {
+  transform: scale(1.07);
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
+  z-index: 10;
+}
+
+.bubble-text {
+  font-size: 1.2rem; /* texte légèrement plus grand */
+  color: #222;
+  font-family: 'Caveat', cursive;
+  line-height: 1.6;
+}
+
+/* Couleurs tricolores 🇫🇷 */
+.bubble.blue {
+  background: radial-gradient(circle at 30% 30%, #dbeafe, #60a5fa, #2563eb);
+  color: white;
+}
+
+.bubble.white {
+  background: radial-gradient(circle at 30% 30%, #ffffff, #f3f4f6, #e5e7eb);
+  color: #333;
+}
+
+.bubble.red {
+  background: radial-gradient(circle at 30% 30%, #fecaca, #f87171, #dc2626);
+  color: white;
+}
+
+/* Animation de flottement */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}

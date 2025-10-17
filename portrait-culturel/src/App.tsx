@@ -57,7 +57,7 @@ export default function App() {
 
     setIsPlaying(!isPlaying);
   };
-
+//oui oui oui   
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {

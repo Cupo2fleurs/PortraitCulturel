@@ -9,5 +9,5 @@ export default defineConfig(({ command }) => ({
       },
     }),
   ],
-  base: command === 'build' ? '/PortraitCulturel/' : '',
+  base:'',
 }))

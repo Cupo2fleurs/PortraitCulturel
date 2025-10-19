@@ -10,32 +10,32 @@ import { useState, useRef } from 'react';
 
 
 export default function App() {
-
+  const base = import.meta.env.BASE_URL ?? '/';
 
   const passions = [
     {
-  image: '/images/passions/musique.jpg',
+  image: 'images/passions/musique.jpg',
   title: 'La musique',
   text: 'Depuis petit, mes parents m’ont transmis leur passion pour la musique, surtout le Rock et le Metal. Cela me permet de sauter, danser et me plonger dans un autre monde à chaque écoute, ou de me défouler pendant les concerts.ATTENTION le son peut être fort !',
-  audio: '/audio/metal.mp3',
+  audio: 'audio/metal.mp3',
 },
 {
-  image: '/images/passions/sport.jpg',
+  image: 'images/passions/sport.jpg',
   title: 'Le sport',
   text: 'Je pratique beaucoup de sport, notamment le badminton depuis 10 ans, mais aussi la course à pied et le vélo. Ces sports me permettent de me sentir libre et d’accomplir des objectifs fous comme récemment mon voyage de 500 km à vélo en totale autonomie sur 5 jours.J\'essaye aussi au maximum de faire de la randonnée pour voir de nouveaux paysages et me ressourcer en pleine nature.',
 },
 {
-  image: '/images/passions/animaux.jpg',
+  image: 'images/passions/animaux.jpg',
   title: 'Les animaux',
   text: 'J’aime beaucoup découvrir et comprendre le monde qui m’entoure, et les animaux me fascinent. J’adore découvrir de nouvelles espèces et comprendre comment elles ont réussi à s’adapter à leur environnement. C’est pourquoi je me suis inscrit à la WWF. L\'animale présent sur la photo est un rhinopothèque brun qui est un singe vivant dans des montagne d\'Asie du Sud-Est.Pour se réchauffer, il se font des câlins en groupe !',
 },
 {
-  image: '/images/passions/jeux.png',
+  image: 'images/passions/jeux.png',
   title: 'Les jeux vidéo',
   text: 'Les jeux vidéo me permettent de relever des défis ou simplement me détendre. Mais il est aussi un moyen de socialiser et de partager des moments avec mes amis, chaque soir nous nous retrouvons en ligne pour jouer ensemble et c\'est ce qui à forgé notre amitié au fil des années.',
 },
 {
-  image: '/images/passions/dessin.jpg',
+  image: 'images/passions/dessin.jpg',
   title: 'Le dessin et l’art',
   text: 'Le dessin est un moyen pour moi d’exprimer toutes les idées qui traversent mon esprit. Je trouve le dessin, le cinéma et l’écriture magnifiques, car ils permettent de transmettre ce qui se cache en nous et de nous faire voyager dans d’autres mondes.',
 },
@@ -71,7 +71,7 @@ export default function App() {
   <MantineProvider>{
     <div className="style">
       <nav className="navbar">
-        <Avatar variant="filled" radius="xs" size="lg" src="/images/logo/MyLogo.png" id="MyLogo" />
+        <Avatar variant="filled" radius="xs" size="lg" src="images/logo/MyLogo.png" id="MyLogo" />
         <Container className="containTravel" bg="var(--mantine-color-yellow-light)">
           <div className='Travel'><Button variant="subtle" color="white" size="md" radius="md" onClick={() => scrollToSection('Moi')}>Moi</Button></div>
           <div className="Travel"><Button variant="subtle" color="white" size="md" radius="md" onClick={() => scrollToSection('Passion')}>Mes Passions</Button></div>
@@ -93,7 +93,7 @@ export default function App() {
           >
             <Stack align="center" gap="sm">
               <Avatar
-                src="/images/Moi/moi.jpg"
+                src={`${base}images/Moi/moi.jpg`}
                 alt="Photo de moi"
                 radius="xl"
                 size={120}
@@ -147,7 +147,7 @@ export default function App() {
       }}
     >
       <img
-        src={passion.image}
+        src={`${base}${passion.image}`}
         alt={passion.title}
         style={{
           borderRadius: '16px',
@@ -169,7 +169,7 @@ export default function App() {
           <Button
             color="dark"
             mt="md"
-            onClick={() => toggleAudio(passion.audio)}
+            onClick={() => toggleAudio(`${base}${passion.audio}`)}
           >
             {isPlaying ? 'Pause' : 'Écouter'}
           </Button>

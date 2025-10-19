@@ -20,7 +20,7 @@ export default function App() {
   audio: 'audio/metal.mp3',
 },
 {
-  image: '/images/passions/sport.jpg',
+  image: '../public/images/passions/sport.jpg',
   title: 'Le sport',
   text: 'Je pratique beaucoup de sport, notamment le badminton depuis 10 ans, mais aussi la course à pied et le vélo. Ces sports me permettent de me sentir libre et d’accomplir des objectifs fous comme récemment mon voyage de 500 km à vélo en totale autonomie sur 5 jours.J\'essaye aussi au maximum de faire de la randonnée pour voir de nouveaux paysages et me ressourcer en pleine nature.',
 },

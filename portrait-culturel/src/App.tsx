@@ -14,7 +14,7 @@ export default function App() {
 
   const passions = [
     {
-  image: '/images/passions/musique.jpg',
+  image: '../public/images/passions/musique.jpg',
   title: 'La musique',
   text: 'Depuis petit, mes parents m’ont transmis leur passion pour la musique, surtout le Rock et le Metal. Cela me permet de sauter, danser et me plonger dans un autre monde à chaque écoute, ou de me défouler pendant les concerts.ATTENTION le son peut être fort !',
   audio: 'audio/metal.mp3',

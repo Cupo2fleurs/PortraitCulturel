@@ -14,13 +14,13 @@ export default function App() {
 
   const passions = [
     {
-  image: '../public/images/passions/musique.jpg',
+  image: '/images/passions/musique.jpg',
   title: 'La musique',
   text: 'Depuis petit, mes parents m’ont transmis leur passion pour la musique, surtout le Rock et le Metal. Cela me permet de sauter, danser et me plonger dans un autre monde à chaque écoute, ou de me défouler pendant les concerts.ATTENTION le son peut être fort !',
-  audio: 'audio/metal.mp3',
+  audio: '/audio/metal.mp3',
 },
 {
-  image: '../public/images/passions/sport.jpg',
+  image: '/images/passions/sport.jpg',
   title: 'Le sport',
   text: 'Je pratique beaucoup de sport, notamment le badminton depuis 10 ans, mais aussi la course à pied et le vélo. Ces sports me permettent de me sentir libre et d’accomplir des objectifs fous comme récemment mon voyage de 500 km à vélo en totale autonomie sur 5 jours.J\'essaye aussi au maximum de faire de la randonnée pour voir de nouveaux paysages et me ressourcer en pleine nature.',
 },

@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
-export default defineConfig(({ command }) => ({
+// https://vite.dev/config/
+export default defineConfig({
   plugins: [
     react({
       babel: {
@@ -9,5 +10,6 @@ export default defineConfig(({ command }) => ({
       },
     }),
   ],
-  base:'',
-}))
+  base: '',
+})
+
